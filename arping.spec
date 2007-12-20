@@ -9,6 +9,7 @@ Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
 Patch0:		arping-mdv_conf.diff
 BuildRequires:	libnet1.1.2-devel
 BuildRequires:	libpcap-devel
+BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 
 %description
 Arping is a util to find out it a specific IP address on the LAN is 'taken'
