@@ -1,8 +1,8 @@
 Summary:	ARP Ping
 Name:           arping
-Version:        2.06
-Release:        %mkrel 2
-License:	GPL
+Version:        2.07
+Release:        %mkrel 1
+License:	GPLv2+
 Group:		Networking/Other
 URL:		http://www.habets.pp.se/synscan/programs.php
 Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
@@ -41,6 +41,6 @@ install -m0755 %{name}.8 %{buildroot}%{_mandir}/man8/
 
 %files
 %defattr(-,root,root)
-%doc LICENSE README arping-scan-net.sh
+%doc README arping-scan-net.sh
 %attr(0755,root,root) %{_sbindir}/*
 %attr(0644,root,root) %{_mandir}/man8/%{name}.8*
