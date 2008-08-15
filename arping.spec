@@ -1,6 +1,6 @@
 Summary:	ARP Ping
 Name:           arping
-Version:        2.07
+Version:        2.08
 Release:        %mkrel 1
 License:	GPLv2+
 Group:		Networking/Other
@@ -9,7 +9,7 @@ Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
 Patch0:		arping-mdv_conf.diff
 BuildRequires:	libnet1.1.2-devel
 BuildRequires:	libpcap-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Arping is a util to find out it a specific IP address on the LAN is 'taken'
@@ -25,10 +25,10 @@ the host blocks ping (all ICMP even)? Then you're screwed. Or you use arping.
 
 %build
 
-make RPM_OPT_FLAGS="%{optflags}"
-
+make RPM_OPT_FLAGS="%{optflags}" LDFLAGS2="-Wl,--as-needed -Wl,--no-undefined"
+  
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 install -d %{buildroot}%{_sbindir}
 install -d %{buildroot}%{_mandir}/man8
@@ -37,7 +37,7 @@ install -m0755 %{name} %{buildroot}%{_sbindir}/%{name}
 install -m0755 %{name}.8 %{buildroot}%{_mandir}/man8/
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
