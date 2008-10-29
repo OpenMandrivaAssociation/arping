@@ -1,7 +1,7 @@
 Summary:	ARP Ping
 Name:           arping
 Version:        2.08
-Release:        %mkrel 1
+Release:        %mkrel 2
 License:	GPLv2+
 Group:		Networking/Other
 URL:		http://www.habets.pp.se/synscan/programs.php
