@@ -1,12 +1,11 @@
 Summary:	ARP Ping
 Name:           arping
-Version:        2.08
-Release:        %mkrel 3
+Version:        2.09
+Release:        %mkrel 1
 License:	GPLv2+
 Group:		Networking/Other
 URL:		http://www.habets.pp.se/synscan/programs.php
 Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
-Patch0:		arping-mdv_conf.diff
 BuildRequires:	net-devel >= 1.1.3
 BuildRequires:	libpcap-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -21,26 +20,21 @@ the host blocks ping (all ICMP even)? Then you're screwed. Or you use arping.
 %prep
 
 %setup -q
-%patch0 -p0
 
 %build
+%configure2_5x
+%make
 
-make RPM_OPT_FLAGS="%{optflags}" LDFLAGS2="%{ldflags}"
-  
 %install
 rm -rf %{buildroot}
 
-install -d %{buildroot}%{_sbindir}
-install -d %{buildroot}%{_mandir}/man8
-
-install -m0755 %{name} %{buildroot}%{_sbindir}/%{name}
-install -m0755 %{name}.8 %{buildroot}%{_mandir}/man8/
+%makeinstall
 
 %clean
 rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README arping-scan-net.sh
+%doc README extra/arping-scan-net.sh
 %attr(0755,root,root) %{_sbindir}/*
 %attr(0644,root,root) %{_mandir}/man8/%{name}.8*
