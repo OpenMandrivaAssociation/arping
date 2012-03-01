@@ -1,11 +1,11 @@
 Summary:	ARP Ping
-Name:           arping
-Version:        2.10
-Release:        %mkrel 1
+Name:		arping
+Version:	2.11
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Other
-URL:		http://www.habets.pp.se/synscan/programs.php
-Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
+URL:		http://www.habets.pp.se/synscan/programs.php?prog=arping
+Source0:	http://www.habets.pp.se/synscan/files/%{name}-%{version}.tar.gz
 BuildRequires:	net-devel >= 1.1.3
 BuildRequires:	libpcap-devel
 
@@ -24,7 +24,7 @@ the host blocks ping (all ICMP even)? Then you're screwed. Or you use arping.
 %make
 
 %install
-%makeinstall
+%makeinstall_std
 
 %files
 %doc README extra/arping-scan-net.sh
