@@ -1,6 +1,6 @@
 Summary:	ARP Ping
 Name:		arping
-Version:	2.12
+Version:	2.13
 Release:	1
 License:	GPLv2+
 Group:		Networking/Other
@@ -82,4 +82,5 @@ the host blocks ping (all ICMP even)? Then you're screwed. Or you use arping.
 * Fri Sep 14 2007 Oden Eriksson <oeriksson@mandriva.com> 2.06-1mdv2008.0
 + Revision: 85629
 - Import arping
+
 

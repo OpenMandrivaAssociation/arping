@@ -1,2 +1,4 @@
+removed_sources:
+  arping-2.12.tar.gz: d31cd9b1f1788e0659fe29463040e889b1170cf7
 sources:
-  "arping-2.12.tar.gz": d31cd9b1f1788e0659fe29463040e889b1170cf7
+  arping-2.13.tar.gz: 974740a544dff7c11bcadf7b2655f06fe20ba462
