@@ -1,12 +1,12 @@
 Summary:	ARP Ping
 Name:		arping
 Version:	2.13
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Networking/Other
 URL:		http://www.habets.pp.se/synscan/programs.php?prog=arping
 Source0:	http://www.habets.pp.se/synscan/files/%{name}-%{version}.tar.gz
-BuildRequires:	net-devel >= 1.1.3
+BuildRequires:	libnet-devel >= 1.1.3
 BuildRequires:	libpcap-devel
 Conflicts:	iputils
 
