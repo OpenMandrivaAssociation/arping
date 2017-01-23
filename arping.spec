@@ -1,7 +1,7 @@
 Summary:	ARP Ping
 Name:		arping
-Version:	2.13
-Release:	3
+Version:	2.18
+Release:	1
 License:	GPLv2+
 Group:		Networking/Other
 URL:		http://www.habets.pp.se/synscan/programs.php?prog=arping
@@ -21,7 +21,7 @@ the host blocks ping (all ICMP even)? Then you're screwed. Or you use arping.
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
