@@ -1,6 +1,6 @@
 Summary:	ARP Ping
 Name:		arping
-Version:	2.20
+Version:	2.21
 Release:	1
 License:	GPLv2+
 Group:		Networking/Other
