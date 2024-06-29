@@ -7,7 +7,7 @@ Group:		Networking/Other
 URL:		http://www.habets.pp.se/synscan/programs.php?prog=arping
 Source0:	http://www.habets.pp.se/synscan/files/%{name}-%{version}.tar.gz
 BuildRequires:	libnet-devel >= 1.1.3
-BuildRequires:	libpcap-devel
+BuildRequires:	pkgconfig(libpcap)
 Conflicts:	iputils
 BuildSystem:	autotools
 
