@@ -4,7 +4,7 @@ Version:	2.25
 Release:	1
 License:	GPLv2+
 Group:		Networking/Other
-URL:		http://www.habets.pp.se/synscan/programs.php?prog=arping
+URL:		https://www.habets.pp.se/synscan/programs.php?prog=arping
 Source0:	http://www.habets.pp.se/synscan/files/%{name}-%{version}.tar.gz
 BuildRequires:	libnet-devel >= 1.1.3
 BuildRequires:	pkgconfig(libpcap)
